@@ -24,6 +24,9 @@ body{
     color: var(--text-color);
     font-size: 1.6rem;
 }
+.content{
+    overflow: hidden;
+}
 section{
     min-height: 100vh;
     padding: 5rem 9% 2rem;
@@ -110,6 +113,9 @@ section{
     transform: translateY(-5px);
     box-shadow: 0 0 10px var(--main-color);
 }
+.search .fa-bars{
+    display: none;
+}
 .btn button{
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -127,12 +133,6 @@ section{
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     color: var(--main-color);
-}
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
 }
 
 
@@ -328,48 +328,6 @@ section{
     transform: translateY(-100%);
 }
 
-/* booking section */
-/* .booking{
-    background: var(--second-bg-color);
-} */
-.booking-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-.booking-container .box img{
-    width: 30rem;
-}
-.booking-container .box h3{
-    font-size: 2.6rem;
-}
-.booking-container .box .price span{
-    color: var(--main-color);
-}
-.booking-container .box .price a{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--second-bg-color);
-    color: var(--text-color);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-    border: none;
-    outline: none;
-    transition: .3s;
-}
-.booking-container .box .price a:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
-    color: var(--main-color);
-    background: var(--text-color);
-    border: 1px solid var(--main-color);
-    border-radius: 10px;
-}
-
-
 /* contact section */
 
 .contact-container{
@@ -547,3 +505,110 @@ textarea:focus{
 
 /* media queries */
 
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer-container{
+        padding: 2rem 3%;
+    }
+    .home{
+        padding: 0 3%;
+    }
+    .home-img img{
+        width: 30vw;
+    }
+    .about-img{
+        width: 70vw;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-text h2{
+        font-size: 4rem;
+    }
+    .about-text p{
+        font-size: 1.6rem;
+    }
+    .heading{
+        font-size: 4rem
+    }
+    .btn{
+        padding: 1rem 2.8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .nav a{
+        display: none;
+    }
+    .search .fa-magnifying-glass{
+        display: none;
+    }
+    .search .fa-bars{
+        display: block;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-text{
+        padding-top: 2rem;
+    }
+    .home-img img{
+        width: 45vw;
+        margin-bottom: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .contact-container{
+        flex-wrap: wrap;
+    }
+}    
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .search input{
+        display: none;
+    }
+    .home-text{
+        padding-top: 2rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }    
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
